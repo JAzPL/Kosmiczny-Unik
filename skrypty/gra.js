@@ -17,7 +17,7 @@ function dopasujRozmiarPlotna() {
     plotno.width = kontenerGry.clientWidth;
     plotno.height = kontenerGry.clientHeight;
 }
-window.addEventListener('resize', dopasujRozmiarPlotna);
+globalThis.addEventListener('resize', dopasujRozmiarPlotna);
 dopasujRozmiarPlotna();
 
 // Zmienne gry
@@ -107,7 +107,7 @@ function stworzPrzeszkode() {
 // Funkcja rysująca i aktualizująca przeszkody
 function obslugaPrzeszkod() {
     for (let i = 0; i < przeszkody.length; i++) {
-        let p = przeszkody[i];
+        const p = przeszkody[i];
         p.y += predkoscGry;
 
         kontekst.fillStyle = p.kolor;
@@ -133,7 +133,7 @@ function obslugaPrzeszkod() {
     }
 
     // Częstotliwość pojawiania się przeszkód rośnie z czasem
-    let czestotliwosc = Math.max(20, 60 - Math.floor(klatki / 100));
+    const czestotliwosc = Math.max(20, 60 - Math.floor(klatki / 100));
     if (klatki % czestotliwosc === 0) {
         stworzPrzeszkode();
     }
