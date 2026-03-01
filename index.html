@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kosmiczny Unik</title>
+    <link rel="stylesheet" href="style/wyglad.css">
+</head>
+<body>
+
+    <div id="kontener-gry">
+        <!-- Przełącznik języka -->
+        <button id="przycisk-jezyka">🇬🇧 EN</button>
+
+        <!-- Ekran startowy -->
+        <div id="ekran-startowy" class="ekran widoczny">
+            <h1 id="tytul-gry">Kosmiczny Unik</h1>
+            <p id="instrukcja">Użyj strzałek Lewo/Prawo lub klikaj po bokach ekranu, aby unikać przeszkód!</p>
+            <button id="przycisk-start">Graj</button>
+        </div>
+
+        <!-- Ekran końca gry -->
+        <div id="ekran-koncowy" class="ekran ukryty">
+            <h1 id="napis-koniec">Koniec Gry!</h1>
+            <p><span id="etykieta-wynik-koncowy">Twój wynik:</span> <span id="koncowy-wynik">0</span></p>
+            <button id="przycisk-restart">Zagraj ponownie</button>
+        </div>
+
+        <!-- Interfejs podczas gry -->
+        <div id="interfejs-gry" class="ukryty">
+            <div id="etykieta-wynik">Wynik: <span id="obecny-wynik">0</span></div>
+        </div>
+
+        <!-- Płótno gry (Canvas) -->
+        <canvas id="plotno-gry"></canvas>
+    </div>
+
+    <!-- Skrypty -->
+    <script src="skrypty/jezyki.js"></script>
+    <script src="skrypty/gra.js"></script>
+</body>
+</html>
